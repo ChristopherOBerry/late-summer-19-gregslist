@@ -1,18 +1,21 @@
 export default class Job{
   constructor(data){
-    this.title = data.title
-    this.salary = data.salary
+    this._id = data._id
+    this.jobTitle = data.jobTitle
+    this.rate = data.rate
     this.company = data.company
-    this.location = data.location
+    this.description = data.description
+    this.hours = data.hours
   }
 
 get Template(){
   return `
   <div class="col-4">
-        <h4>Title: ${this.title}</h4>
-        <h4>Salary: ${this.salary}</h4>
+        <h4>Title: ${this.jobTitle}</h4>
         <h4>Company: ${this.company}</h4>
-        <p>Location: ${this.location}</p>
+        <h4>Rate: ${this.rate}</h4>
+        <h4>Hours: ${this.hours}</h4>
+        <p>Description: ${this.description}</p>
       </div>
   `
 }
